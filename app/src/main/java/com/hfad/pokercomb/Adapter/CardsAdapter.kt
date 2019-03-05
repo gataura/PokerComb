@@ -1,0 +1,105 @@
+package com.hfad.pokercomb.Adapter
+
+import android.content.Context
+import android.support.v7.widget.CardView
+import android.support.v7.widget.RecyclerView
+import android.view.LayoutInflater
+import android.view.View
+import android.view.ViewGroup
+import android.view.animation.AnimationUtils
+import android.widget.ImageView
+import android.widget.TextView
+import com.hfad.pokercomb.R
+import com.hfad.pokercomb.helper.CardsHelper
+import com.hfad.pokercomb.helper.ItemClickListener
+import com.hfad.pokercomb.models.Card
+import com.hfad.pokercomb.models.Combination
+
+class CardsAdapter(var values: List<Combination>, var context: Context, var deck: List<Card>): RecyclerView.Adapter<CardsAdapter.CardsViewHolder>() {
+
+    var res1: Int = 0
+    var res2: Int = 0
+    var res3: Int = 0
+    var res4: Int = 0
+    var res5: Int = 0
+
+    var cardsHelper = CardsHelper()
+
+
+    override fun onBindViewHolder(p0: CardsViewHolder, p1: Int) {
+
+        val item = values[p1]
+
+
+        cardsHelper.setPics(p0,cardsHelper.takePics(item.getPics(), deck),context)
+
+        p0.comboTitle.text = item.getComboName()
+        p0.comboDesc.text = item.getComboDesc()
+        p0.comboProb.text = item.getProbability()
+
+        p0.setItemClickListener(object: ItemClickListener {
+            override fun onClick(v: View, position: Int, isLongClick: Boolean) {
+
+                cardsHelper.setPics(p0,cardsHelper.takePics(item.getPics(), deck),context)
+
+            }
+
+        })
+
+
+    }
+
+
+    override fun getItemCount(): Int {
+        return values.size
+    }
+
+    override fun onCreateViewHolder(p0: ViewGroup, p1: Int): CardsViewHolder {
+
+        val view:View = LayoutInflater.from(p0.context).inflate(R.layout.combo_item_view, p0, false)
+        return CardsViewHolder(view)
+
+    }
+
+    class CardsViewHolder(itemView: View): RecyclerView.ViewHolder(itemView), View.OnLongClickListener, View.OnClickListener {
+
+        fun setItemClickListener(itemClickListener: ItemClickListener) {
+
+            this.itemClickListener = itemClickListener
+
+        }
+
+        override fun onClick(v: View) {
+
+            itemClickListener.onClick(v, adapterPosition, false)
+            //v.startAnimation(AnimationUtils.loadAnimation(v.context, R.anim.tap))
+
+        }
+
+        override fun onLongClick(v: View): Boolean {
+
+            return true
+
+        }
+
+        var comboCard: CardView = itemView.findViewById(R.id.combo_card)
+        var comboTitle: TextView = itemView.findViewById(R.id.item_title)
+        var comboDesc: TextView = itemView.findViewById(R.id.item_desc)
+        var comboProb: TextView = itemView.findViewById(R.id.item_prob)
+        var pic1: ImageView = itemView.findViewById(R.id.image1)
+        var pic2: ImageView = itemView.findViewById(R.id.image2)
+        var pic3: ImageView = itemView.findViewById(R.id.image3)
+        var pic4: ImageView = itemView.findViewById(R.id.image4)
+        var pic5: ImageView = itemView.findViewById(R.id.image5)
+
+        private lateinit var itemClickListener: ItemClickListener
+
+
+        init {
+            comboCard.setOnClickListener(this)
+            comboCard.setOnLongClickListener(this)
+        }
+
+    }
+
+}
