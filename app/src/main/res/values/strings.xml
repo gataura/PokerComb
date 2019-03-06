@@ -10,4 +10,17 @@
     <string name="description">Description</string>
     <string name="probability">probability</string>
     <string name="card_pic">card_pic</string>
+    <string name="button_1">Button 1</string>
+    <string name="button_2">Button 2</string>
+    <string name="button_3">Button 3</string>
+    <string name="button_4">Button 4</string>
+    <string name="answer">Answer</string>
+    <string name="continue_button">Continue</string>
+    <string name="best_combo">Best combiantion is</string>
+    <string name="answered_in">Answered in</string>
+    <string name="average_speed">Average speed is</string>
+    <string name="accuracy">Accuracy</string>
+    <string name="recognition_game">Recognition game</string>
+    <string name="poker_combo">Poker Combo</string>
+    <string name="banner_ad_unit_id">ca-app-pub-6889774123711089/7934848429</string>
 </resources>

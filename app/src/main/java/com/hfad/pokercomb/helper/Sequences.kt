@@ -11,6 +11,7 @@ class Sequences {
     var c = 0
     var comboList = mutableListOf<String>()
     var tempList = mutableListOf<Int>()
+    var tempCardLIst = mutableListOf<String>()
     lateinit var tempCard:Card
 
     fun royalFlush(cards: List<Card>): List<String> {
@@ -59,7 +60,7 @@ class Sequences {
                 comboList.add(i.getPic())
             }
         }
-        comboList.add(cards[randomRank2].getPic())
+        comboList.add(cards[randomRank2-2].getPic())
         return comboList
     }
 
@@ -143,7 +144,7 @@ class Sequences {
         while (c!=2) {
             randomRank2 = (2..14).random()
             if (!tempList.contains(randomRank2)) {
-                comboList.add(cards[randomRank2].getPic())
+                comboList.add(cards[randomRank2-2].getPic())
                 tempList.add(randomRank2)
                 c++
             }
@@ -187,7 +188,8 @@ class Sequences {
         while (c!=1) {
             randomRank1 = (2..14).random()
             if (!tempList.contains(randomRank1)) {
-                comboList.add(cards[randomRank1].getPic())
+                comboList.add(cards[randomRank1-2].getPic())
+                comboList.add(cards[randomRank1-2].getPic())
                 c++
             }
         }
@@ -212,7 +214,7 @@ class Sequences {
         while (c!=3) {
             randomRank2 = (2..14).random()
             if (!tempList.contains(randomRank2)) {
-                comboList.add(cards[randomRank2].getPic())
+                comboList.add(cards[randomRank2-2].getPic())
                 tempList.add(randomRank2)
                 c++
             }
@@ -234,5 +236,22 @@ class Sequences {
             }
         }
         return comboList
+    }
+
+    fun addTwoCards(cards: List<String>, cardPics: List<String>): List<String> {
+        comboList.clear()
+        comboList.addAll(cards)
+        tempCardLIst.clear()
+        c = 0
+
+        while (c!=2) {
+            randomRank1 = (0..51).random()
+            if (!comboList.contains(cardPics[randomRank1])) {
+                tempCardLIst.add(cardPics[randomRank1])
+                c++
+            }
+        }
+        Log.d("addTwo", "$comboList")
+        return tempCardLIst
     }
 }

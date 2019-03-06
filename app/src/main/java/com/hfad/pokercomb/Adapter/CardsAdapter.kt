@@ -17,11 +17,6 @@ import com.hfad.pokercomb.models.Combination
 
 class CardsAdapter(var values: List<Combination>, var context: Context, var deck: List<Card>): RecyclerView.Adapter<CardsAdapter.CardsViewHolder>() {
 
-    var res1: Int = 0
-    var res2: Int = 0
-    var res3: Int = 0
-    var res4: Int = 0
-    var res5: Int = 0
 
     var cardsHelper = CardsHelper()
 
@@ -48,6 +43,14 @@ class CardsAdapter(var values: List<Combination>, var context: Context, var deck
 
 
     }
+    override fun getItemId(position: Int): Long {
+        return position.toLong()
+    }
+
+    override fun getItemViewType(position: Int): Int {
+        return position
+    }
+
 
 
     override fun getItemCount(): Int {

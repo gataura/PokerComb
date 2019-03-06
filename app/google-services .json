@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "262494943843",
+    "firebase_url": "https://cards-combo.firebaseio.com",
+    "project_id": "cards-combo",
+    "storage_bucket": "cards-combo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:262494943843:android:4b99d91d3b02bc39",
+        "android_client_info": {
+          "package_name": "com.hfad.pokercomb"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "262494943843-ubaqb5t8r95pabnmg7nvjv3tg7fqftff.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCKLO4ZGDCeNDg9Hgp7fbzHXSdfBW23QDI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

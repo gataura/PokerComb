@@ -1,5 +1,6 @@
 package com.hfad.pokercomb
 
+import android.content.Intent
 import android.os.Bundle
 import android.support.design.widget.Snackbar
 import android.support.design.widget.NavigationView
@@ -14,6 +15,8 @@ import com.hfad.pokercomb.Adapter.CardsAdapter
 import com.hfad.pokercomb.helper.Constants
 import com.hfad.pokercomb.models.Card
 import com.hfad.pokercomb.models.Combination
+import com.yandex.metrica.YandexMetrica
+import com.yandex.metrica.YandexMetricaConfig
 import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.android.synthetic.main.app_bar_main.*
 
@@ -21,43 +24,28 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
     var constants = Constants()
 
-    var cardPics = arrayListOf(
-            "h2", "h3", "h4", "h5", "h6", "h7", "h8", "h9", "h10", "jh", "qh", "kh", "ah",
-            "d2", "d3", "d4", "d5", "d6", "d7", "d8", "d9", "d10", "jd", "qd", "kd", "ad",
-            "s2", "s3", "s4", "s5", "s6", "s7", "s8", "s9", "s10", "js", "qs", "ks", "as",
-            "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10", "jc", "qc", "kc", "ac"
-            )
-
-    val comboList = arrayListOf(
-            Combination(constants.rfName,constants.rfDesc, constants.rfProbability, constants.rfPics),
-            Combination(constants.sfName,constants.sfDesc, constants.sfProbability, constants.sfPics),
-            Combination(constants.fkName,constants.fkDesc, constants.fkProbability, constants.fkPics),
-            Combination(constants.fhName,constants.fhDesc, constants.fhProbability, constants.fhPics),
-            Combination(constants.fName,constants.fDesc, constants.fProbability, constants.fPics),
-            Combination(constants.sName,constants.sDesc, constants.sProbability, constants.sPics),
-            Combination(constants.tkName,constants.tkDesc, constants.tkProbability, constants.tkPics),
-            Combination(constants.tpName,constants.tpDesc, constants.tpProbability, constants.tpPics),
-            Combination(constants.opName,constants.opDesc, constants.opProbability, constants.opPics),
-            Combination(constants.hkName,constants.hkDesc, constants.hkProbability, constants.hkPics)
-    )
-
-    var cardRank = arrayListOf(2,3,4,5,6,7,8,9,10,11,12,13,14) //каждая цифра - определенная карта, 2 - двойка, 14 - туз
-    var cardSuit = arrayListOf(1,2,3,4) //каждая цифра - опредленная масть, 1 - сердце, 2 - бубны, 3 - пики, 4 - трефы сделано для дальнейшего удобства
 
     var deck = mutableListOf<Card>()
     lateinit var cardsResyclerView: RecyclerView
     lateinit var cardsAdapter: CardsAdapter
     lateinit var layoutManager: LinearLayoutManager
     var iter = 0 //variable for iteration in cardPics array
+    lateinit var intent1: Intent
+    lateinit var config:YandexMetricaConfig
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
+        intent1 = Intent(this, GameActivity::class.java)
+
+        config = YandexMetricaConfig.newConfigBuilder("b4fc6f4b-2f34-4829-9afe-80252cbe39f3").build()
+        YandexMetrica.activate(this, config)
+        YandexMetrica.enableActivityAutoTracking(this.application)
 
         fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+            deck.shuffle()
+            cardsAdapter.notifyDataSetChanged()
         }
 
         val toggle = ActionBarDrawerToggle(
@@ -67,9 +55,11 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         nav_view.setNavigationItemSelectedListener(this)
 
-        for (i in cardSuit) {
-            for (j in cardRank) {
-                deck.add(Card(cardPics[iter],j,i))
+        deck.clear()
+
+        for (i in constants.cardSuit) {
+            for (j in constants.cardRank) {
+                deck.add(Card(constants.cardPics[iter],j,i))
                 iter++
             }
         }
@@ -81,11 +71,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         cardsResyclerView.isNestedScrollingEnabled = false
         layoutManager = LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false)
         cardsResyclerView.layoutManager = layoutManager
-        cardsAdapter = CardsAdapter(comboList, this, deck)
+        cardsAdapter = CardsAdapter(constants.comboList, this, deck)
         cardsResyclerView.adapter = cardsAdapter
         cardsAdapter.notifyDataSetChanged()
 
     }
+
+
 
 
     override fun onBackPressed() {
@@ -101,25 +93,13 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         return true
     }
 
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        when (item.itemId) {
-            R.id.action_settings -> return true
-            else -> return super.onOptionsItemSelected(item)
-        }
-    }
+
 
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
         when (item.itemId) {
-            R.id.nav_camera -> {
+            R.id.nav_game -> {
 
-            }
-            R.id.nav_gallery -> {
-
-            }
-            R.id.nav_slideshow -> {
-
-            }
-            R.id.nav_manage -> {
+                this.startActivity(intent1)
 
             }
             R.id.nav_share -> {
