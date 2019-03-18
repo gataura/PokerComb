@@ -41,10 +41,10 @@ class MyDialogFragment: DialogFragment() {
         var wrongAns = mPrefs.getInt("wrongAns", 1)
         var average = mPrefs.getLong("allTime", 0)/mPrefs.getInt("allClicks", 1)
 
-        bestCombo.text = "Best combination is $combo"
-        ansIn.text = "Answered in ${mPrefs.getString("timer", "0.0")} sec"
-        averageTime.text = "Average speed is $average sec"
-        accuracy.text = "Accuracy: $rightAns/${rightAns+wrongAns}"
+        bestCombo.text = "Лучшая комбинация: $combo"
+        ansIn.text = "Отвечено за ${mPrefs.getString("timer", "0.0")} сек"
+        averageTime.text = "Средняя скорость: $average сек"
+        accuracy.text = "Точность: $rightAns/${rightAns+wrongAns}"
 
         if (ansCombo == combo) {
             ansText.text = "Correct!"

@@ -6,54 +6,54 @@ import com.hfad.pokercomb.models.Combination
 class Constants {
 
 
-    var rfName = "Royal flush"
-    var rfDesc: String = "Five cards of the same suit in sequence 10 to Ace."
-    var rfProbability: String = "Probability: 4 out of 2,6 million 0.0002%"
+    var rfName = "Флеш рояль"
+    var rfDesc: String = "Туз, король, дама, валет и десятка одной масти."
+    var rfProbability: String = "Вероятность: 4 из 2,6 миллионов 0.0002%"
     var rfPics: String = "RF"
 
-    var sfName = "Straight flush"
-    var sfDesc: String = "Five cards in sequence of the same suit."
-    var sfProbability: String = "Probability: 36 out of 2,6 million 0.0014%"
+    var sfName = "Стрит флеш"
+    var sfDesc: String = "5 последовательных одномастных карт."
+    var sfProbability: String = "Вероятность: 36 из 2,6 миллионов 0.0014%"
     var sfPics: String = "SF"
 
-    var fkName = "Four of a kind"
-    var fkDesc: String = "Four cards of the same rank."
-    var fkProbability: String = "Probability: 624 out of 2,6 million 0.02%"
+    var fkName = "Каре"
+    var fkDesc: String = "4 карты одного ранга."
+    var fkProbability: String = "Вероятность: 624 из 2,6 миллионов 0.02%"
     var fkPics: String = "FK"
 
-    var fhName = "Full house"
-    var fhDesc: String = "Three matching cards of one rank and two matching cards of another rank."
-    var fhProbability: String = "Probability: 3744 out of 2,6 million 0.14%"
+    var fhName = "Фулл хауз"
+    var fhDesc: String = "Три карты одного ранга и две карты другого ранга."
+    var fhProbability: String = "Вероятность: 3744 из 2,6 миллионов 0.14%"
     var fhPics: String = "FH"
 
-    var fName = "Flush"
-    var fDesc: String = "Five cards of the same suit."
-    var fProbability: String = "Probability: 5108 out of 2,6 million 0.2%"
+    var fName = "Флеш"
+    var fDesc: String = "Пять карт одной масти."
+    var fProbability: String = "Вероятность: 5108 из 2,6 миллионов 0.2%"
     var fPics: String = "F"
 
-    var sName = "Straight"
-    var sDesc: String = "Five cards in sequence of ranks."
-    var sProbability: String = "Probability: 10200 out of 2,6 million 0.39%"
+    var sName = "Стрит"
+    var sDesc: String = "Пять последовательных по рангу карт."
+    var sProbability: String = "Вероятность: 10200 из 2,6 миллионов 0.39%"
     var sPics: String = "S"
 
-    var tkName = "Three of a kind"
-    var tkDesc: String = "Three cards of the same rank."
-    var tkProbability: String = "Probability: 54912 out of 2,6 million 2.11%"
+    var tkName = "Тройка (трипс)"
+    var tkDesc: String = "Три карты одного ранга."
+    var tkProbability: String = "Вероятность: 54912 из 2,6 миллионов 2.11%"
     var tkPics: String = "TK"
 
-    var tpName = "Two pair"
-    var tpDesc: String = "Two pairs of matching cards by rank."
-    var tpProbability: String = "Probability: 123552 out of 2,6 million 4.75%"
+    var tpName = "Две пары"
+    var tpDesc: String = "Две карты одного ранга + две карты другого ранга."
+    var tpProbability: String = "Вероятность: 123552 из 2,6 миллионов 4.75%"
     var tpPics: String = "TP"
 
-    var opName = "One pair"
-    var opDesc: String = "Two cards of the same rank."
-    var opProbability: String = "Probability: 1098240 out of 2,6 million 42.26%"
+    var opName = "Пара"
+    var opDesc: String = "Две карты одного ранга."
+    var opProbability: String = "Вероятность: 1098240 из 2,6 миллионов 42.26%"
     var opPics: String = "OP"
 
-    var hkName = "High card"
-    var hkDesc: String = "The card with the highest rank."
-    var hkProbability: String = "Probability: 1302540 out of 2,6 million 50.12%"
+    var hkName = "Старшая карта"
+    var hkDesc: String = "Карта старшего ранга."
+    var hkProbability: String = "Вероятность: 1302540 из 2,6 миллионов 50.12%"
     var hkPics: String = "HC"
 
     var cardPics = arrayListOf(
@@ -63,7 +63,7 @@ class Constants {
             "c2", "c3", "c4", "c5", "c6", "c7", "c8", "c9", "c10", "jc", "qc", "kc", "ac"
     )
 
-    var cardCombos = arrayListOf("Royal flush","Straight flush","Four of a kind","Full house","Full house", "Flush","Straight","Three of a kind","Two pair","One pair","High card")
+    var cardCombos = arrayListOf("Флеш рояль","Стрит флеш","Каре","Full house","Фулл хауз", "Флеш","Стрит","Тройка (трипс)","Две пары","Пара","Старшая карта")
 
     val comboList = arrayListOf(
             Combination(rfName,rfDesc, rfProbability, rfPics),

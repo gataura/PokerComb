@@ -244,52 +244,52 @@ class GameActivity : AppCompatActivity() {
             1 -> {
                 picList.addAll(seq.royalFlush(deck))
                 picList.addAll(seq.addTwoCards(picList, constants.cardPics)) //adding two more cards
-                comb = "Royal Flush"
+                comb = "Флеш рояль"
             }
             2 -> {
                 picList.addAll(seq.straightFlush(deck))
                 picList.addAll(seq.addTwoCards(picList, constants.cardPics)) //adding two more cards
-                comb = "Straight Flush"
+                comb = "Стрит флеш"
             }
             3 -> {
                 picList.addAll(seq.fourOfAKind(deck))
                 picList.addAll(seq.addTwoCards(picList, constants.cardPics)) //adding two more cards
-                comb = "Four of a kind"
+                comb = "Каре"
             }
             4 -> {
                 picList.addAll(seq.fullHouse(deck))
                 picList.addAll(seq.addTwoCards(picList, constants.cardPics)) //adding two more cards
-                comb = "Full house"
+                comb = "Фулл хауз"
             }
             5 -> {
                 picList.addAll(seq.flush(deck))
                 picList.addAll(seq.addTwoCards(picList, constants.cardPics)) //adding two more cards
-                comb = "Flush"
+                comb = "Флеш"
             }
             6 -> {
                 picList.addAll(seq.straight(deck))
                 picList.addAll(seq.addTwoCards(picList, constants.cardPics)) //adding two more cards
-                comb = "Straight"
+                comb = "Стрит"
             }
             7 -> {
                 picList.addAll(seq.threeOfAKind(deck))
                 picList.addAll(seq.addTwoCards(picList, constants.cardPics)) //adding two more cards
-                comb = "Three of a kind"
+                comb = "Тройка (трипс)"
             }
             8 -> {
                 picList.addAll(seq.twoPair(deck))
                 picList.addAll(seq.addTwoCards(picList, constants.cardPics)) //adding two more cards
-                comb = "Two pair"
+                comb = "Две пары"
             }
             9 -> {
                 picList.addAll(seq.onePair(deck))
                 picList.addAll(seq.addTwoCards(picList, constants.cardPics)) //adding two more cards
-                comb = "One pair"
+                comb = "Пара"
             }
             10 -> {
                 picList.addAll(seq.highestCard(deck))
                 picList.addAll(seq.addTwoCards(picList, constants.cardPics)) //adding two more cards
-                comb = "High card"
+                comb = "Старшая карта"
             }
         }
     }
