@@ -24,6 +24,6 @@
     <string name="poker_combo">Poker Combo</string>
     <string name="banner_ad_unit_id">ca-app-pub-6889774123711089/7934848429</string>
 
-    <string name="facebook_app_id" translatable="false">410078536422719</string>
-    <string name="fb_login_protocol_scheme" translatable="false">fb410078536422719</string>
+    <string name="facebook_app_id">304136210284097</string>
+    <string name="fb_login_protocol_scheme">fb304136210284097</string>
 </resources>

@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setSupportActionBar(toolbar)
         intent1 = Intent(this, GameActivity::class.java)
 
-        config = YandexMetricaConfig.newConfigBuilder("b4fc6f4b-2f34-4829-9afe-80252cbe39f3").build()
+        config = YandexMetricaConfig.newConfigBuilder("bedffc2b-c76e-4cc7-bc50-336363641dd1").build()
         YandexMetrica.activate(this, config)
         YandexMetrica.enableActivityAutoTracking(this.application)
 
@@ -100,12 +100,6 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             R.id.nav_game -> {
 
                 this.startActivity(intent1)
-
-            }
-            R.id.nav_share -> {
-
-            }
-            R.id.nav_send -> {
 
             }
         }
