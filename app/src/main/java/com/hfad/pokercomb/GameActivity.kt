@@ -45,7 +45,6 @@ class GameActivity : AppCompatActivity() {
     var allTime:Long = 0
     var counter = 0
     lateinit var toolbar:Toolbar
-    private lateinit var mInterstitialAd: InterstitialAd
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -70,10 +69,6 @@ class GameActivity : AppCompatActivity() {
 
         refresh()
 
-        MobileAds.initialize(this, "ca-app-pub-3940256099942544~3347511713")
-        mInterstitialAd = InterstitialAd(this)
-        mInterstitialAd.adUnitId = "ca-app-pub-3940256099942544/1033173712"
-        mInterstitialAd.loadAd(AdRequest.Builder().addTestDevice("F9629AB0617288FDF96BEF70E9154EAD").build())
 
 
         currentTime = Calendar.getInstance().timeInMillis
@@ -155,14 +150,6 @@ class GameActivity : AppCompatActivity() {
         ansCombo = b.text.toString()
         clickCounter++
         allTime += TimeUnit.MILLISECONDS.toSeconds(Calendar.getInstance().timeInMillis - currentTime)
-        counter++
-        if (counter % 5 == 0) {
-            if (mInterstitialAd.isLoaded) {
-                mInterstitialAd.show()
-            } else {
-                Log.d("TAG", "The interstitial wasn't loaded yet.")
-            }
-        }
         if (b.text == comb) {
             rightAns++
             openDialog()
@@ -177,14 +164,6 @@ class GameActivity : AppCompatActivity() {
         ansCombo = b.text.toString()
         clickCounter++
         allTime += TimeUnit.MILLISECONDS.toSeconds(Calendar.getInstance().timeInMillis - currentTime)
-        counter++
-        if (counter % 5 == 0) {
-            if (mInterstitialAd.isLoaded) {
-                mInterstitialAd.show()
-            } else {
-                Log.d("TAG", "The interstitial wasn't loaded yet.")
-            }
-        }
         if (b.text == comb) {
             rightAns++
             openDialog()
@@ -199,14 +178,6 @@ class GameActivity : AppCompatActivity() {
         ansCombo = b.text.toString()
         clickCounter++
         allTime += TimeUnit.MILLISECONDS.toSeconds(Calendar.getInstance().timeInMillis - currentTime)
-        counter++
-        if (counter % 5 == 0) {
-            if (mInterstitialAd.isLoaded) {
-                mInterstitialAd.show()
-            } else {
-                Log.d("TAG", "The interstitial wasn't loaded yet.")
-            }
-        }
         if (b.text == comb) {
             rightAns++
             openDialog()
@@ -221,14 +192,6 @@ class GameActivity : AppCompatActivity() {
         ansCombo = b.text.toString()
         clickCounter++
         allTime += TimeUnit.MILLISECONDS.toSeconds(Calendar.getInstance().timeInMillis - currentTime)
-        counter++
-        if (counter % 5 == 0) {
-            if (mInterstitialAd.isLoaded) {
-                mInterstitialAd.show()
-            } else {
-                Log.d("TAG", "The interstitial wasn't loaded yet.")
-            }
-        }
         if (b.text == comb) {
             rightAns++
             openDialog()
