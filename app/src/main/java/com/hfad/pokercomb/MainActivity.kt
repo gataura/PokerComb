@@ -11,6 +11,7 @@ import android.support.v7.widget.LinearLayoutManager
 import android.support.v7.widget.RecyclerView
 import android.view.Menu
 import android.view.MenuItem
+import com.google.android.gms.ads.MobileAds
 import com.hfad.pokercomb.Adapter.CardsAdapter
 import com.hfad.pokercomb.helper.Constants
 import com.hfad.pokercomb.models.Card
@@ -38,6 +39,8 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         setContentView(R.layout.activity_main)
         setSupportActionBar(toolbar)
         intent1 = Intent(this, GameActivity::class.java)
+
+        MobileAds.initialize(this, "ca-app-pub-9561253976720525~7609604274")
 
         config = YandexMetricaConfig.newConfigBuilder("bedffc2b-c76e-4cc7-bc50-336363641dd1").build()
         YandexMetrica.activate(this, config)

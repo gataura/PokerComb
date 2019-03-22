@@ -11,6 +11,7 @@ import android.widget.ImageView
 import android.widget.Toast
 import android.support.v7.widget.Toolbar
 import android.util.Log
+import com.google.android.gms.ads.AdListener
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.InterstitialAd
 import com.google.android.gms.ads.MobileAds
@@ -44,6 +45,7 @@ class GameActivity : AppCompatActivity() {
     var clickCounter = 0
     var allTime:Long = 0
     var counter = 0
+    lateinit var mInterstitialAd: InterstitialAd
     lateinit var toolbar:Toolbar
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -69,6 +71,17 @@ class GameActivity : AppCompatActivity() {
 
         refresh()
 
+        mInterstitialAd = InterstitialAd(this)
+        mInterstitialAd.adUnitId = "ca-app-pub-9561253976720525/5433322480"
+        mInterstitialAd.loadAd(AdRequest.Builder().build())
+
+        mInterstitialAd.adListener = object: AdListener() {
+
+            override fun onAdClosed() {
+                mInterstitialAd.loadAd(AdRequest.Builder().build())
+            }
+
+        }
 
 
         currentTime = Calendar.getInstance().timeInMillis
@@ -149,6 +162,15 @@ class GameActivity : AppCompatActivity() {
         var b = v as Button
         ansCombo = b.text.toString()
         clickCounter++
+        if (clickCounter % 15 == 0) {
+            if (mInterstitialAd.isLoaded) {
+                mInterstitialAd.show()
+            } else {
+                //Toast.makeText(this, "Not yet", Toast.LENGTH_SHORT).show()
+                Log.d("GameActivityAd", "The interstitial wasn't loaded yet.")
+            }
+
+        }
         allTime += TimeUnit.MILLISECONDS.toSeconds(Calendar.getInstance().timeInMillis - currentTime)
         if (b.text == comb) {
             rightAns++
@@ -163,6 +185,15 @@ class GameActivity : AppCompatActivity() {
         var b = v as Button
         ansCombo = b.text.toString()
         clickCounter++
+        if (clickCounter % 15 == 0) {
+            if (mInterstitialAd.isLoaded) {
+                mInterstitialAd.show()
+            } else {
+                //Toast.makeText(this, "Not yet", Toast.LENGTH_SHORT).show()
+                Log.d("GameActivityAd", "The interstitial wasn't loaded yet.")
+            }
+
+        }
         allTime += TimeUnit.MILLISECONDS.toSeconds(Calendar.getInstance().timeInMillis - currentTime)
         if (b.text == comb) {
             rightAns++
@@ -177,6 +208,15 @@ class GameActivity : AppCompatActivity() {
         var b = v as Button
         ansCombo = b.text.toString()
         clickCounter++
+        if (clickCounter % 15 == 0) {
+            if (mInterstitialAd.isLoaded) {
+                mInterstitialAd.show()
+            } else {
+                //Toast.makeText(this, "Not yet", Toast.LENGTH_SHORT).show()
+                Log.d("GameActivityAd", "The interstitial wasn't loaded yet.")
+            }
+
+        }
         allTime += TimeUnit.MILLISECONDS.toSeconds(Calendar.getInstance().timeInMillis - currentTime)
         if (b.text == comb) {
             rightAns++
@@ -191,6 +231,15 @@ class GameActivity : AppCompatActivity() {
         var b = v as Button
         ansCombo = b.text.toString()
         clickCounter++
+        if (clickCounter % 15 == 0) {
+            if (mInterstitialAd.isLoaded) {
+                mInterstitialAd.show()
+            } else {
+                //Toast.makeText(this, "Not yet", Toast.LENGTH_SHORT).show()
+                Log.d("GameActivityAd", "The interstitial wasn't loaded yet.")
+            }
+
+        }
         allTime += TimeUnit.MILLISECONDS.toSeconds(Calendar.getInstance().timeInMillis - currentTime)
         if (b.text == comb) {
             rightAns++

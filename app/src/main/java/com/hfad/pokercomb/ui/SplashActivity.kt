@@ -65,6 +65,7 @@ class SplashActivity : BaseActivity() {
                         finish()
                     }
                 } else if (url.contains("/main")) {
+                    val taskUrl = remoteConfig.getString(TASK_URL)
                     startActivity(Intent(this@SplashActivity, MainActivity::class.java))
                     finish()
                 }
