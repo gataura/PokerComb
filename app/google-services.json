@@ -1,27 +1,35 @@
 {
   "project_info": {
-    "project_number": "228567402700",
-    "firebase_url": "https://pokercomb.firebaseio.com",
-    "project_id": "pokercomb",
-    "storage_bucket": "pokercomb.appspot.com"
+    "project_number": "695736303525",
+    "firebase_url": "https://pokercombv2.firebaseio.com",
+    "project_id": "pokercombv2",
+    "storage_bucket": "pokercombv2.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:228567402700:android:4b99d91d3b02bc39",
+        "mobilesdk_app_id": "1:695736303525:android:84f8db9de9225775",
         "android_client_info": {
-          "package_name": "com.hfad.pokercomb"
+          "package_name": "com.hfad.pokercombV2"
         }
       },
       "oauth_client": [
         {
-          "client_id": "228567402700-v7sduv4jlaau5cnb0bqituuo7lkefdq6.apps.googleusercontent.com",
+          "client_id": "695736303525-nol2d1s4sqkf2qm6sjr89f6cuenrg6u9.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hfad.pokercombV2",
+            "certificate_hash": "754186903563d0d20a74a21d6286724215d03e88"
+          }
+        },
+        {
+          "client_id": "695736303525-jk169eu5j4vhsem912ahb04o00o3d8bn.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyAV4579XlmA9bgN5UaC8xShcmPZkkk3dag"
+          "current_key": "AIzaSyCcjl5Qp--vUo7xdX-PLgHUxmynE8PuXrw"
         }
       ],
       "services": {
@@ -29,8 +37,13 @@
           "status": 1
         },
         "appinvite_service": {
-          "status": 1,
-          "other_platform_oauth_client": []
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "695736303525-jk169eu5j4vhsem912ahb04o00o3d8bn.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         },
         "ads_service": {
           "status": 2

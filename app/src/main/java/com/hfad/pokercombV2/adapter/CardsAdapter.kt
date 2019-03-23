@@ -1,4 +1,4 @@
-package com.hfad.pokercomb.Adapter
+package com.hfad.pokercombV2.adapter
 
 import android.content.Context
 import android.support.v7.widget.CardView
@@ -6,16 +6,15 @@ import android.support.v7.widget.RecyclerView
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.view.animation.AnimationUtils
 import android.widget.ImageView
 import android.widget.TextView
-import com.hfad.pokercomb.R
-import com.hfad.pokercomb.helper.CardsHelper
-import com.hfad.pokercomb.helper.ItemClickListener
-import com.hfad.pokercomb.models.Card
-import com.hfad.pokercomb.models.Combination
+import com.hfad.pokercombV2.R
+import com.hfad.pokercombV2.helpers.CardsHelper
+import com.hfad.pokercombV2.helpers.ItemClickListener
+import com.hfad.pokercombV2.models.Card
+import com.hfad.pokercombV2.models.Combination
 
-class CardsAdapter(var values: List<Combination>, var context: Context, var deck: List<Card>): RecyclerView.Adapter<CardsAdapter.CardsViewHolder>() {
+class CardsAdapter(private var values: List<Combination>, var context: Context, var deck: List<Card>): RecyclerView.Adapter<CardsAdapter.CardsViewHolder>() {
 
 
     var cardsHelper = CardsHelper()
@@ -28,6 +27,12 @@ class CardsAdapter(var values: List<Combination>, var context: Context, var deck
 
         cardsHelper.setPics(p0,cardsHelper.takePics(item.getPics(), deck),context)
 
+        bindElements(p0,item)
+
+
+    }
+
+    private fun bindElements(p0: CardsViewHolder, item:Combination) {
         p0.comboTitle.text = item.getComboName()
         p0.comboDesc.text = item.getComboDesc()
         p0.comboProb.text = item.getProbability()
@@ -40,9 +45,8 @@ class CardsAdapter(var values: List<Combination>, var context: Context, var deck
             }
 
         })
-
-
     }
+
     override fun getItemId(position: Int): Long {
         return position.toLong()
     }
@@ -85,10 +89,10 @@ class CardsAdapter(var values: List<Combination>, var context: Context, var deck
 
         }
 
-        var comboCard: CardView = itemView.findViewById(R.id.combo_card)
-        var comboTitle: TextView = itemView.findViewById(R.id.item_title)
-        var comboDesc: TextView = itemView.findViewById(R.id.item_desc)
-        var comboProb: TextView = itemView.findViewById(R.id.item_prob)
+        private var comboCard: CardView = itemView.findViewById(R.id.combo_card)
+        var comboTitle: TextView = itemView.findViewById(R.id.combo_item_title)
+        var comboDesc: TextView = itemView.findViewById(R.id.combo_item_desc)
+        var comboProb: TextView = itemView.findViewById(R.id.combo_item_prob)
         var pic1: ImageView = itemView.findViewById(R.id.image1)
         var pic2: ImageView = itemView.findViewById(R.id.image2)
         var pic3: ImageView = itemView.findViewById(R.id.image3)

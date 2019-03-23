@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/bgcolor"
     tools:context=".GameActivity">
 
     <android.support.v7.widget.Toolbar
@@ -13,13 +13,13 @@
         app:layout_constraintTop_toTopOf="parent" />
 
 
-
     <LinearLayout
         android:id="@+id/linearLayout2"
         android:layout_width="0dp"
         android:layout_height="100dp"
         android:layout_marginStart="8dp"
         android:layout_marginLeft="8dp"
+        android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
         android:layout_marginBottom="8dp"
@@ -38,7 +38,7 @@
             android:layout_weight="1.5" />
 
         <ImageView
-            android:id="@+id/image6"
+            android:id="@+id/game_image6"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -51,7 +51,7 @@
 
 
         <ImageView
-            android:id="@+id/image7"
+            android:id="@+id/game_image7"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -79,6 +79,7 @@
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         android:layout_marginRight="8dp"
+        android:layout_marginBottom="8dp"
         android:orientation="horizontal"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -88,7 +89,7 @@
         app:layout_constraintVertical_bias="0.0">
 
         <ImageView
-            android:id="@+id/image1"
+            android:id="@+id/game_image1"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -100,7 +101,7 @@
             android:src="@drawable/ic_launcher_background" />
 
         <ImageView
-            android:id="@+id/image2"
+            android:id="@+id/game_image2"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -112,7 +113,7 @@
             android:src="@drawable/ic_launcher_background" />
 
         <ImageView
-            android:id="@+id/image3"
+            android:id="@+id/game_image3"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -124,7 +125,7 @@
             android:src="@drawable/ic_launcher_background" />
 
         <ImageView
-            android:id="@+id/image4"
+            android:id="@+id/game_image4"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -136,7 +137,7 @@
             android:src="@drawable/ic_launcher_background" />
 
         <ImageView
-            android:id="@+id/image5"
+            android:id="@+id/game_image5"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="4dp"
@@ -150,7 +151,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/button1"
+        android:id="@+id/game_button1"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -169,7 +170,7 @@
         app:layout_constraintVertical_bias="0.148" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/game_button2"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -184,11 +185,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button1"
+        app:layout_constraintTop_toBottomOf="@+id/game_button1"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/game_button3"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -203,11 +204,11 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button2"
+        app:layout_constraintTop_toBottomOf="@+id/game_button2"
         app:layout_constraintVertical_bias="0.0" />
 
     <Button
-        android:id="@+id/button4"
+        android:id="@+id/game_button4"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -222,7 +223,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button3"
+        app:layout_constraintTop_toBottomOf="@+id/game_button3"
         app:layout_constraintVertical_bias="0.0" />
 
 </android.support.constraint.ConstraintLayout>

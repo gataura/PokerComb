@@ -1,7 +1,6 @@
-package com.hfad.pokercomb.helper
+package com.hfad.pokercombV2.helpers
 
-import android.content.SharedPreferences
-import com.hfad.pokercomb.models.Combination
+import com.hfad.pokercombV2.models.Combination
 
 class Constants {
 

@@ -1,4 +1,4 @@
-package com.hfad.pokercomb._core
+package com.hfad.pokercombV2._core
 
 import android.os.Bundle
 import android.support.annotation.LayoutRes
@@ -6,8 +6,8 @@ import android.support.v7.app.AppCompatActivity
 import com.facebook.appevents.AppEventsLogger
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
 import com.google.firebase.remoteconfig.FirebaseRemoteConfigSettings
-import com.hfad.pokercomb.BuildConfig
-import com.hfad.pokercomb.R
+import com.hfad.pokercombV2.BuildConfig
+import com.hfad.pokercombV2.R
 
 
 /**

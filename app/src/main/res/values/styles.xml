@@ -23,6 +23,10 @@
     <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
 
+    <style name="MyAppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="MyAppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
     <style name="Animation.WindowSlideUpDown" parent="@android:style/Animation.Activity">
         <item name="android:windowEnterAnimation">@anim/anim_in</item>
         <item name="android:windowExitAnimation">@anim/anim_out</item>
@@ -33,6 +37,24 @@
         <item name="android:layout_height">?attr/actionBarSize</item>
         <item name="theme">@style/ThemeOverlay.AppCompat.Dark.ActionBar</item>
         <item name="android:background">@color/colorPrimary</item>
+    </style>
+
+    <style name="MyAppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="MyAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textViewStyle">@style/PtSerifTextViewStyle</item>
+        <item name="buttonStyle">@style/PtSerifButtonStyle</item>
+    </style>
+
+    <style name="PtSerifTextViewStyle" parent="android:Widget.TextView">
+        <item name="android:fontFamily">@font/pt_serif</item>
+    </style>
+
+    <style name="PtSerifButtonStyle" parent="android:Widget.Holo.Button">
+        <item name="android:fontFamily">@font/pt_serif</item>
     </style>
 
 </resources>

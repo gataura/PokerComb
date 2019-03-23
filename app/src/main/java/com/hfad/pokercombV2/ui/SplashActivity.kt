@@ -1,4 +1,4 @@
-package com.hfad.pokercomb.ui
+package com.hfad.pokercombV2.ui
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -8,10 +8,8 @@ import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.ProgressBar
 import com.google.firebase.remoteconfig.FirebaseRemoteConfig
-import com.hfad.pokercomb.MainActivity
-import com.hfad.pokercomb.R
-import com.hfad.pokercomb._core.BaseActivity
-import com.mazur.app.*
+import com.hfad.pokercombV2.*
+import com.hfad.pokercombV2._core.BaseActivity
 import kotlinx.android.synthetic.main.activity_web_view.*
 
 

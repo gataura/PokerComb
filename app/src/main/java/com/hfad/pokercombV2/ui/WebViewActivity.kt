@@ -1,4 +1,4 @@
-package com.hfad.pokercomb.ui
+package com.hfad.pokercombV2.ui
 
 import android.annotation.SuppressLint
 import android.content.Intent
@@ -11,9 +11,9 @@ import android.webkit.WebSettings.RenderPriority.*
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import android.widget.ProgressBar
-import com.hfad.pokercomb.R
-import com.hfad.pokercomb._core.BaseActivity
-import com.mazur.app.EXTRA_TASK_URL
+import com.hfad.pokercombV2.R
+import com.hfad.pokercombV2._core.BaseActivity
+import com.hfad.pokercombV2.EXTRA_TASK_URL
 import im.delight.android.webview.AdvancedWebView
 import kotlinx.android.synthetic.main.activity_web_view.*
 

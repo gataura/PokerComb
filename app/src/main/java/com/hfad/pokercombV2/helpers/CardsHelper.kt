@@ -1,22 +1,20 @@
-package com.hfad.pokercomb.helper
+package com.hfad.pokercombV2.helpers
 
 import android.content.Context
-import com.hfad.pokercomb.Adapter.CardsAdapter
-import com.hfad.pokercomb.models.Card
-import com.hfad.pokercomb.models.Combination
-import kotlin.math.sqrt
+import com.hfad.pokercombV2.adapter.CardsAdapter
+import com.hfad.pokercombV2.models.Card
 
 class CardsHelper {
 
-    var seq = Sequences()
+    private var seq = Sequences()
 
-    var res1: Int = 0
-    var res2: Int = 0
-    var res3: Int = 0
-    var res4: Int = 0
-    var res5: Int = 0
+    private var res1: Int = 0
+    private var res2: Int = 0
+    private var res3: Int = 0
+    private var res4: Int = 0
+    private var res5: Int = 0
 
-    var l = mutableListOf<String>()
+    private var l = mutableListOf<String>()
 
     fun takePics(name:String, deck: List<Card>): List<String> {
 

@@ -1,7 +1,7 @@
-package com.hfad.pokercomb.ui
+package com.hfad.pokercombV2.ui
 
-import com.hfad.pokercomb.R
-import com.hfad.pokercomb._core.BaseActivity
+import com.hfad.pokercombV2.R
+import com.hfad.pokercombV2._core.BaseActivity
 
 
 /**

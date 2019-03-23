@@ -1,4 +1,4 @@
-package com.hfad.pokercomb
+package com.hfad.pokercombV2
 
 import org.junit.Test
 

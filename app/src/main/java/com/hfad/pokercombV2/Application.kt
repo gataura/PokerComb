@@ -1,4 +1,4 @@
-package com.mazur.app
+package com.hfad.pokercombV2
 
 import android.app.Application
 import com.google.firebase.FirebaseApp

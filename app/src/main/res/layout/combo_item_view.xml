@@ -15,14 +15,14 @@
     app:cardUseCompatPadding="true">
 
 
-    <android.support.constraint.ConstraintLayout
-        xmlns:android="http://schemas.android.com/apk/res/android"
+    <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:background="@color/bgcolor">
 
 
         <TextView
-            android:id="@+id/item_title"
+            android:id="@+id/combo_item_title"
             style="@style/item_title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -41,7 +41,7 @@
             app:layout_constraintVertical_bias="0.0" />
 
         <TextView
-            android:id="@+id/item_desc"
+            android:id="@+id/combo_item_desc"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -55,11 +55,11 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_title"
+            app:layout_constraintTop_toBottomOf="@+id/combo_item_title"
             app:layout_constraintVertical_bias="0.009" />
 
         <TextView
-            android:id="@+id/item_prob"
+            android:id="@+id/combo_item_prob"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="8dp"
@@ -73,7 +73,7 @@
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_desc"
+            app:layout_constraintTop_toBottomOf="@+id/combo_item_desc"
             app:layout_constraintVertical_bias="0.0" />
 
         <LinearLayout
@@ -84,7 +84,7 @@
             android:orientation="horizontal"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/item_prob"
+            app:layout_constraintTop_toBottomOf="@+id/combo_item_prob"
             app:layout_constraintVertical_bias="0.0">
 
             <ImageView

@@ -1,7 +1,7 @@
-package com.hfad.pokercomb.helper
+package com.hfad.pokercombV2.helpers
 
 import android.util.Log
-import com.hfad.pokercomb.models.Card
+import com.hfad.pokercombV2.models.Card
 
 class Sequences {
 

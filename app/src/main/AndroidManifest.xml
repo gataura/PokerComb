@@ -1,10 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.hfad.pokercomb">
+    package="com.hfad.pokercombV2">
 
     <uses-permission android:name="android.permission.INTERNET"/>
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+
 
     <application
         android:allowBackup="true"
@@ -12,19 +13,22 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
+        android:theme="@style/MyAppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         android:hardwareAccelerated="true">
         <meta-data
             android:name="com.google.android.gms.ads.APPLICATION_ID"
             android:value="ca-app-pub-9561253976720525~7609604274"/>
         <activity
-            android:name=".MainActivity"
+            android:name="com.hfad.pokercombV2.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar">
+            >
         </activity>
-        <activity android:name=".GameActivity" />
+        <activity android:name="com.hfad.pokercombV2.GameActivity" />
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/facebook_app_id"/>
+        <meta-data
+            android:name="preloaded_fonts"
+            android:resource="@array/preloaded_fonts" />
 
         <activity android:name="com.facebook.FacebookActivity"
             android:configChanges=
@@ -42,7 +46,7 @@
         </activity>
         <activity
             android:launchMode="singleTask"
-            android:name=".ui.SplashActivity"
+            android:name="com.hfad.pokercombV2.ui.SplashActivity"
             android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN"/>
@@ -51,11 +55,11 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".ui.WebViewActivity"
-            android:screenOrientation="portrait"
+        <activity android:name="com.hfad.pokercombV2.ui.WebViewActivity"
+
             android:launchMode="singleTask"/>
 
-        <activity android:name=".ui.ContentActivity"
+        <activity android:name="com.hfad.pokercombV2.ui.ContentActivity"
             android:screenOrientation="portrait"
             android:launchMode="singleTask"/>
     </application>

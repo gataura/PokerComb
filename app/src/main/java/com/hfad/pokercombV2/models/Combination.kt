@@ -1,4 +1,4 @@
-package com.hfad.pokercomb.models
+package com.hfad.pokercombV2.models
 
 class Combination (
 

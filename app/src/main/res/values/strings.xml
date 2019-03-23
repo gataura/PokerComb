@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">PokerComb</string>
+    <string name="app_name">Покeр для новичков</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="nav_header_title">Android Studio</string>
@@ -24,6 +24,6 @@
     <string name="poker_combo">Poker Combo</string>
     <string name="banner_ad_unit_id">ca-app-pub-6889774123711089/7934848429</string>
 
-    <string name="facebook_app_id">304136210284097</string>
-    <string name="fb_login_protocol_scheme">fb304136210284097</string>
+    <string name="facebook_app_id">325479871656487</string>
+    <string name="fb_login_protocol_scheme">fb325479871656487</string>
 </resources>
